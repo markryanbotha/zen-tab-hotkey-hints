@@ -30,6 +30,18 @@ This mod needs JavaScript, so install it with [Sine](https://github.com/CosmoCre
 |---|---|---|
 | `mod.zen-tab-hotkey-hints.delay-ms` | `300` | Hold time before badges appear |
 | `mod.zen-tab-hotkey-hints.show-last-tab-hint` | `true` | Show the `9` badge on the last tab |
+| `mod.zen-tab-hotkey-hints.nav-scheme` | `both` | Ctrl tab navigation keys: `off`, `jk` (vim), `np` (emacs), or `both` |
+
+## Tab navigation
+
+- `Ctrl+J` / `Ctrl+N` = next tab (down)
+- `Ctrl+K` / `Ctrl+P` = previous tab (up)
+- Cycling wraps around at the ends.
+- Inactive while you type in a browser text field (input, textarea, search bar, or editable content).
+
+This intercepts these combos while a webpage has focus. So emacs-style
+`Ctrl+N` / `Ctrl+P` cursor movement in page text fields stops working.
+Set the scheme to `jk` to avoid that.
 
 ## How it works
 

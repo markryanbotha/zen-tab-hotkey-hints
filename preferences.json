@@ -11,5 +11,17 @@
     "label": "Show the last-tab hint (modifier+9) when more than 8 tabs are open",
     "type": "checkbox",
     "defaultValue": true
+  },
+  {
+    "property": "mod.zen-tab-hotkey-hints.nav-scheme",
+    "label": "Ctrl tab navigation keys (j/k vim, n/p emacs)",
+    "type": "dropdown",
+    "defaultValue": "both",
+    "options": [
+      { "label": "Off", "value": "off" },
+      { "label": "Ctrl+J / Ctrl+K", "value": "jk" },
+      { "label": "Ctrl+N / Ctrl+P", "value": "np" },
+      { "label": "Both", "value": "both" }
+    ]
   }
 ]
