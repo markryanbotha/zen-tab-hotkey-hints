@@ -1,0 +1,15 @@
+[
+  {
+    "property": "mod.zen-tab-hotkey-hints.delay-ms",
+    "label": "Delay before hints appear (milliseconds)",
+    "type": "string",
+    "defaultValue": "300",
+    "placeholder": "e.g: 300"
+  },
+  {
+    "property": "mod.zen-tab-hotkey-hints.show-last-tab-hint",
+    "label": "Show the last-tab hint (modifier+9) when more than 8 tabs are open",
+    "type": "checkbox",
+    "defaultValue": true
+  }
+]

@@ -1,0 +1,60 @@
+/* Zen Tab Hotkey Hints
+   Badges appear on tabs while the tab-switch modifier is held.
+   Style matches the reference UI: small dark pill, right-aligned
+   in the row, e.g. [ ⌘ 1 ]. */
+
+@keyframes zen-tab-hint-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+#main-window[zen-tab-hints] .tabbrowser-tab .tab-stack {
+  position: relative;
+}
+
+.zen-tab-hint-badge {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  z-index: 100;
+  pointer-events: none;
+
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: light-dark(rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.1));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  color: currentColor;
+
+  animation: zen-tab-hint-in 120ms ease-out;
+}
+
+/* Essentials are compact icon tiles: pin the badge to the corner. */
+.tabbrowser-tab[zen-essential] .zen-tab-hint-badge {
+  top: auto;
+  right: 2px;
+  bottom: 2px;
+  transform: none;
+  padding: 1px 5px;
+  font-size: 10px;
+  animation: none;
+}
+
+/* Collapsed sidebar rows are icon-only: keep the badge inside. */
+#main-window:not([zen-sidebar-expanded]) .zen-tab-hint-badge {
+  right: 0;
+  padding: 1px 5px;
+  font-size: 10px;
+}

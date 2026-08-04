@@ -1,0 +1,19 @@
+{
+  "id": "zen-tab-hotkey-hints",
+  "name": "Tab Hotkey Hints",
+  "description": "Hold Cmd/Ctrl/Alt to show tab-switch hotkey badges on your tabs.",
+  "scripts": {
+    "zen-tab-hotkey-hints.uc.js": {
+      "include": ["chrome://browser/content/browser.xhtml"]
+    }
+  },
+  "style": {
+    "chrome": "userChrome.css"
+  },
+  "preferences": "preferences.json",
+  "readme": "README.md",
+  "author": "bothamar",
+  "version": "1.0.0",
+  "tags": ["Zen Browser", "Tabs", "Keyboard Shortcuts"],
+  "fork": ["zen"]
+}
